@@ -1,4 +1,4 @@
-package com.dudream.dao.base;
+package com.dudream.base.dao;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 

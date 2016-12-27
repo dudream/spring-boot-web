@@ -1,7 +1,7 @@
 package com.dudream.dao;
 
-import com.dudream.dao.base.Dao;
-import com.dudream.dao.base.DataSourceType;
+import com.dudream.base.dao.Dao;
+import com.dudream.base.dao.DataSourceType;
 import com.dudream.model.User;
 import org.apache.ibatis.annotations.Mapper;
 

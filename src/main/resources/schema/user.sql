@@ -5,3 +5,5 @@ CREATE TABLE demo.user (
   `user_name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into demo.user value(10, "ABC");

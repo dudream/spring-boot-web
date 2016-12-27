@@ -1,4 +1,4 @@
-package com.dudream.dao.base;
+package com.dudream.base.dao;
 
 import org.apache.commons.dbcp.BasicDataSourceFactory;
 import org.springframework.beans.factory.annotation.Autowired;

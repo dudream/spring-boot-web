@@ -1,4 +1,4 @@
-package com.dudream.dao.base;
+package com.dudream.base.dao;
 
 public enum DataSourceType {
 

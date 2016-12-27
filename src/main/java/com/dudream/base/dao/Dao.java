@@ -1,4 +1,4 @@
-package com.dudream.dao.base;
+package com.dudream.base.dao;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
