@@ -1,0 +1,59 @@
+group 'com.dudream'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        maven {
+            url 'http://10.111.0.15:8081/artifactory/plugins-release'
+            credentials {
+                username = "services"
+                password = "services"
+            }
+        }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.4.0"
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+    }
+}
+
+apply plugin: "com.jfrog.artifactory"
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+artifactory {
+    contextUrl = "http://10.111.0.15:8081/artifactory"
+    resolve {
+        repository {
+            repoKey = 'repo'
+            username = "services"
+            password = "services"
+            maven = true
+        }
+    }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1")
+    compile("org.springframework.boot:spring-boot-starter-freemarker")
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.9'
+    compile("commons-dbcp:commons-dbcp:1.4")
+    compile("mysql:mysql-connector-java:6.0.2")
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.4'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.12'
+    compile group: 'com.google.guava', name: 'guava', version: '19.0'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14'
+}

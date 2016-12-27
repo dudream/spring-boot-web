@@ -1,0 +1,21 @@
+# "temporary" build files
+.target/
+out/
+build/
+.gradle/
+
+#.gitignore for java
+*.class
+
+## .gitignore for intellij
+*.iml
+*.ipr
+*.iws
+.idea/
+
+## .gitignore for mac os x
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
